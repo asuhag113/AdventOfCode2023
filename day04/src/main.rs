@@ -1,26 +1,5 @@
 use std::collections::{ HashSet, HashMap };
 
-// 1: 4
-// 2: 2
-// 3: 2
-// 4: 1
-// 5: 0
-// 6: 0
-
-// 1: 1
-// 2: 2
-// 3: 4
-// 4: 8
-// 5: 14
-// 6: 1
-
-// 1: 1 1 1 1 1
-// 2: 1 2 2 2 2
-// 3: 1 2 4 4 4
-// 4: 1 2 4 8 8
-// 5: 1 2 2 6 14
-// 6: 1 1 1 1 1
-
 fn count_total_cards(game_match_map: HashMap<u32, u32>) -> u32 {
     let mut card_count_map: HashMap<u32, u32> = (1..=game_match_map.len())
         .map(|n: usize| (n as u32, 1 as u32))
